@@ -1,5 +1,5 @@
 {% set name = "shillelagh" %}
-{% set version = "1.2.6" %}
+{% set version = "1.2.7" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/shillelagh-{{ version }}.tar.gz
-  sha256: 3bc203b6b3c74b1748be3221529161b1c991bc29de561723aa470eec339aea72
+  sha256: ca54a61f3b72c14bc5a73462e0c8dab6a8b200e4d0f68b9571b7ddbb0d5731e0
 
 build:
   noarch: python
@@ -34,7 +34,6 @@ requirements:
     - greenlet >=2.0.2
     - typing-extensions >=3.7.4.3
     - packaging
-
 
 test:
   imports:
