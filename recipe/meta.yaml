@@ -19,7 +19,7 @@ build:
 requirements:
   host:
     - python >=3.8
-    - setuptools >=46.1.0
+    - setuptools >=46.1.0,<50
     - setuptools-scm >=5
     - wheel
     - pyscaffold >=3.2a0
@@ -30,6 +30,7 @@ requirements:
     - apsw >=3.9.2
     - python-dateutil >=2.8.1
     - requests >=2.31.0
+    - requests-cache >=0.7.1
     - sqlalchemy >=1.3
     - greenlet >=2.0.2
     - typing-extensions >=3.7.4.3
@@ -38,6 +39,7 @@ requirements:
 test:
   imports:
     - shillelagh
+    - shillelagh --help
   commands:
     - pip check
   requires:
