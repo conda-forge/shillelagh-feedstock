@@ -39,9 +39,9 @@ requirements:
 test:
   imports:
     - shillelagh
-    - shillelagh --help
   commands:
     - pip check
+    - shillelagh --help
   requires:
     - pip
 
