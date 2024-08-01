@@ -1,5 +1,5 @@
 {% set name = "shillelagh" %}
-{% set version = "1.2.22" %}
+{% set version = "1.2.23" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/shillelagh-{{ version }}.tar.gz
-  sha256: f9d6637b1b57eae880e38ca27c171001445752df971e53f383c43cf240d03fcf
+  sha256: 8ffe59eafe1a44e0d014af4906ff4a5198885f0238c8bd13cf5e1838ac59869c
 
 build:
   noarch: python
