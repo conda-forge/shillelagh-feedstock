@@ -1,5 +1,5 @@
 {% set name = "shillelagh" %}
-{% set version = "1.3.4" %}
+{% set version = "1.4.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,14 +7,14 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/shillelagh-{{ version }}.tar.gz
-  sha256: 2f06c90254cb70230871088603012306d2d5769587412556d50eded57a86aa9a
+  sha256: ab3d88f954246fd3b8f6cd665b4cad1783e0bfc81756362e72ac6327f47abf3d
 
 build:
   noarch: python
   entry_points:
     - shillelagh = shillelagh.console:main
   script: {{ PYTHON }} -m pip install . -vv
-  number: 1
+  number: 0
 
 requirements:
   host:
@@ -25,9 +25,28 @@ requirements:
     - pyscaffold >=3.2a0
     - pip
   run:
+    - appdirs
+    - boto3
+    - botocore
+    - defusedxml
+    - holidays
+    - jsonpath
+    - numpy
+    - pandas
+    - prison
+    - prompt_toolkit
+    - psutil
+    - psycopg2
+    - pyarrow
+    - pygments
+    - pyyaml
+    - sqlglot
+    - tabulate
+    - typing_extensions >=3.7.4.3
+    - yarl
     - python >={{ python_min }}
     - importlib-metadata
-    - apsw >=3.9.2
+    - apsw >=3.43.2.0
     - python-dateutil >=2.8.1
     - requests >=2.31.0
     - requests-cache >=0.7.1
@@ -35,6 +54,45 @@ requirements:
     - greenlet >=2.0.2
     - typing-extensions >=3.7.4.3
     - packaging
+    # - yarl >=1.8.1
+    # - typing_extensions >=3.7.4.3
+    # - tabulate >=0.8.9
+    # - sqlglot >=23.0.2
+    # - sphinx >=4.0.1
+    # - ruff >=0.3.7
+    # - requests-mock >=1.8.0
+    # - python_dateutil >=2.8.1
+    # - python-jsonpath >=0.10.3
+    # - python-graphql-client >=0.4.3
+    # - pytest-mock >=3.5.1
+    # - pytest-integration ==0.2.2
+    # - pytest-cov >=2.11.1
+    # - pytest >=7.2.0
+    # - pyopenssl >=24.0.0
+    # - pylint >=2.16.2
+    # - pygments >=2.8
+    # - pyfakefs >=4.3.3
+    # - pyarrow >=14.0.1
+    # - psycopg2 >=2.9.9
+    # - psutil >=5.8.0
+    # - prompt_toolkit >=3
+    # - prison >=0.2.1
+    # - pre-commit >=2.13.0
+    # - pip-tools >=6.4.0
+    # - pip-compile-multi >=2.6.3
+    # - pandas >=1.2.2
+    # - html5lib >=1.1
+    # - holidays >=0.23
+    # - google-auth >=1.23.0
+    # - freezegun >=1.1.0
+    # - flake8-pyproject >=1.2.3
+    # - dill >=0.3.6
+    # - defusedxml >=0.7.1
+    # - codespell >=2.1.0
+    # - boto3 >=1.24.28
+    # - beautifulsoup4 >=4.11.1
+    # - appdirs >=1.4.4
+    # - PyYAML >=5.4
 
 test:
   imports:
