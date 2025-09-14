@@ -1,5 +1,5 @@
 {% set name = "shillelagh" %}
-{% set version = "1.4.0" %}
+{% set version = "1.4.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/shillelagh-{{ version }}.tar.gz
-  sha256: ab3d88f954246fd3b8f6cd665b4cad1783e0bfc81756362e72ac6327f47abf3d
+  sha256: ecb0da32274306ed754c0ee8499ca828454c7763347adc8fa5343fd47e57995f
 
 build:
   noarch: python
@@ -26,27 +26,27 @@ requirements:
     - pyscaffold >=3.2a0
     - pip
   run:
-    - appdirs
-    - boto3
+    - appdirs >=1.4.4
+    - boto3 >=1.24.28
     - botocore
-    - defusedxml
-    - holidays
+    - defusedxml >=0.7.1
+    - holidays >=0.23
     - jsonpath
     - numpy
-    - pandas
-    - prison
-    - prompt_toolkit
-    - psutil
-    - psycopg2
-    - pyarrow
-    - pygments
+    - pandas >=1.2.2
+    - prison >=0.2.1
+    - prompt_toolkit >=3
+    - psutil >=5.8.0
+    - psycopg2 >=2.9.9
+    - pyarrow >=14.0.1
+    - pygments >=2.8
     - pyyaml
-    - sqlglot
-    - tabulate
+    - sqlglot >=23.0.2
+    - tabulate >=0.8.9
     - typing_extensions >=3.7.4.3
-    - yarl
+    - yarl >=1.8.1
     - python >={{ python_min }}
-    - importlib-metadata
+    - importlib-metadata 
     - apsw >=3.43.2.0
     - python-dateutil >=2.8.1
     - requests >=2.31.0
@@ -54,7 +54,7 @@ requirements:
     - sqlalchemy >=1.3
     - greenlet >=2.0.2
     - typing-extensions >=3.7.4.3
-    - packaging
+    - packaging 
     # - yarl >=1.8.1
     # - typing_extensions >=3.7.4.3
     # - tabulate >=0.8.9
@@ -93,6 +93,30 @@ requirements:
     # - boto3 >=1.24.28
     # - beautifulsoup4 >=4.11.1
     # - appdirs >=1.4.4
+    # - PyYAML >=5.4
+    # - sphinx >=4.0.1
+    # - ruff >=0.3.7
+    # - requests-mock >=1.8.0
+    # - python_dateutil >=2.8.1
+    # - python-jsonpath >=0.10.3
+    # - python-graphql-client >=0.4.3
+    # - pytest-mock >=3.5.1
+    # - pytest-integration ==0.2.2
+    # - pytest-cov >=2.11.1
+    # - pytest >=7.2.0
+    # - pyopenssl >=24.0.0
+    # - pylint >=2.16.2
+    # - pyfakefs >=4.3.3
+    # - pre-commit >=2.13.0
+    # - pip-tools >=6.4.0
+    # - pip-compile-multi >=2.6.3
+    # - html5lib >=1.1
+    # - google-auth >=1.23.0
+    # - freezegun >=1.1.0
+    # - flake8-pyproject >=1.2.3
+    # - dill >=0.3.6
+    # - codespell >=2.1.0
+    # - beautifulsoup4 >=4.11.1
     # - PyYAML >=5.4
 
 test:
